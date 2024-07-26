@@ -27,7 +27,6 @@ export class ChatComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    // Check and apply the saved theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       document.body.classList.add('dark-mode');
@@ -40,10 +39,9 @@ export class ChatComponent implements OnInit, OnDestroy {
         this.userId = userIdParam;
         this.roomID = roomIDParam;
 
-        // Unirse a la sala utilizando el roomID capturado
+        
         this.chatService.joinRoom(this.roomID);
 
-        // Suscripción para recibir mensajes
         this.messageSubscription = this.chatService.receiveMessage().subscribe((message: ChatMessage) => {
           this.messages.push(message);
         });
@@ -54,7 +52,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // Limpiar la suscripción al destruir el componente
+ 
     if (this.messageSubscription) {
       this.messageSubscription.unsubscribe();
     }
@@ -67,8 +65,8 @@ export class ChatComponent implements OnInit, OnDestroy {
         user: this.userId,
         timestamp: new Date()
       };
-      this.chatService.sendMessage(this.roomID, chatMessage); // Utiliza this.roomID para enviar el mensaje a la sala correcta
-      this.newMessage = ''; // Limpiar el campo de entrada después de enviar el mensaje
+      this.chatService.sendMessage(this.roomID, chatMessage); 
+      this.newMessage = ''; 
     }
   }
 

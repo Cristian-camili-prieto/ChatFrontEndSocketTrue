@@ -26,14 +26,14 @@
 
 .message-sent {
   align-self: flex-end;
-  background-color: #dcf8c6; /* Color for light mode */
-  color: black; /* Color for light mode text */
+  background-color: #dcf8c6; 
+  color: black; 
 }
 
 .message-received {
   margin-right: auto;
-  background-color: #a59cfc; /* Color for light mode */
-  color: black; /* Color for light mode text */
+  background-color: #a59cfc; 
+  color: black; 
 }
 
 .message-text {
@@ -49,7 +49,7 @@
   display: flex;
   align-items: center;
   padding: 10px;
-  margin-top: auto; /* Empuja el área de entrada al final */
+  margin-top: auto; 
 }
 
 .message-input textarea {
@@ -144,11 +144,11 @@ body.dark-mode .dark-mode-switch {
 }
 
 body.dark-mode .message-sent {
-  background-color: #333333 !important; /* Color for dark mode */
+  background-color: #333333 !important; 
   color: #ffffff !important;
 }
 
 body.dark-mode .message-received {
-  background-color: #444444 !important; /* Color for dark mode */
+  background-color: #444444 !important;
   color: #ffffff !important;
 }
