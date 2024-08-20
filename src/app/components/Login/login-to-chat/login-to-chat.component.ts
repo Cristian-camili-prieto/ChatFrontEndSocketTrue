@@ -24,7 +24,7 @@ export class LoginToChatComponent {
       next: (response: UserResponse) => {
         console.log('Login successful:', response);
         // Aquí puedes redirigir a la página de chat usando los valores obtenidos
-        this.router.navigate([`chat/${response.userId}`]); // Ajusta el URL según tus necesidades
+        this.router.navigate([`chat/${response.userId}/${response.role}`]); // Ajusta el URL según tus necesidades
       },
       error: (error) => {
         console.error('Login failed:', error);
